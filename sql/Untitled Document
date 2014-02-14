@@ -1,0 +1,9 @@
+create table Asukas
+(
+asukasId serial primary key
+);
+create table Resurssi
+(
+R_id integer primary key
+kalenteri 
+);
