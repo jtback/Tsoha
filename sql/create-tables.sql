@@ -1,21 +1,30 @@
+create table huoneisto
+(
+	id		serial 	primary key,
+	huoneisto_nro 	int 			--huoneiston numero taloyhtiössä
+
+);
 create table asukas
 (
-asukasId serial primary key,
-Sukunimi varchar(20) not null,
-huoneisto int references huoneisto(huoneistoID)
+	id 		serial 		primary key,
+	Sukunimi 	varchar(20) 	not null,
+	huoneisto_id 	int 		references huoneisto
 );
 
 create table resurssi
 (
-R_id integer primary key,
-nimi varchar(30), --esim "pyykkikone 1"
-kalenteri_ID integer references kalenteri(kalenteri),
-viikonAika_ID integer references viikonAika(vuoronAlku), 
+	id		serial		 primary key,
+    nimi 	varchar(30) 			--esim "pyykkikone 1"
+	--kalenteri_ID integer references kalenteri(kalenteri),
+	--viikonAika_ID integer references viikonAika(vuoronAlku), 
 );
 
-create table huoneisto
+create table taloyhtiö
 (
-huoneistoId serial primary key,
-huoneistoNro int foreign key,
-
+	Y_tunnus	    int		primary key,
+	nimi		    varchar(40),		
+	huoneistoLkm	int,
+	huoneistot	    int
 );
+
+
