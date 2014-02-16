@@ -2,7 +2,12 @@
   $tervehdys = "Tervetuloa taloyhtiösivuille!"; 
 ?><!DOCTYPE HTML>
 <html>
-<head><title><?php echo $tervehdys; ?></title></head>
+<head><title><?php echo $tervehdys; ?></title>
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet">
+
+</head>
 <body>
   <h1><?php echo $tervehdys; ?></h1>
   <div>
