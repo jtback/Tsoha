@@ -1,11 +1,15 @@
 Mitä opin tänään
 
-serial yhdistää automaattisesti taulun nimen (asukas) attribuutin id nimeen 
+serial yhdistää automaattisesti taulun nimen (asukas) attribuutin nimeen id 
 eli asukas_id
 
 -Viimeisen attribuutin jälkeen ei tule pilkkua
 
 Mikä on huoneiston paikka taloyhtiössä?: taloyhtiössä kukin asukas liittyy yhteen asuntoon. Asunnot omana taulunaan, jotta taulun kokoa on helppo muuttaa. Kuhunkin asuntoon voi liittyä vain rajoitettu määrä taloudellisessa vastuussa olevia henklöitä.
 
-Bootsträpin purkamisessa huomioitava, extractoija pura vain valittuna olevaa tiedostoa, jollei dialogissa ole määritelty valintaa. 
+Bootsträpin purkamisessa huomioitava, extractoi ei pura vain valittuna olevaa tiedostoa, jollei dialogissa ole määritelty valintaa. Purkaa sen kansion, minkä sisällä?
+
+-
+
+
 

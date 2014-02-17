@@ -12,15 +12,15 @@
         <div>
             <h1>Tervetuloa taloyhtiösivuille</h1>
             <ul>palvelut
-      <li>palvelu1</li>
-      <li>palvelu2</li>
-      <li>palvelu3</li>
-    </ul>
-       <p>anna käyttäjätunnuksesi
-            <input type="text" name="username"></p>
-       <p>Syötä salasanasi
-       <input type="text" name="password">     
-      </p>
+                <li>palvelu1</li>
+                <li>palvelu2</li>
+                <li>palvelu3</li>
+            </ul>    
+            <form action="login" method="post">
+                Käyttäjänimi: <input type="text" name="username"/>
+                Salasana: <input type="password" name="password"/>
+                <button type="submit">Kirjaudu</button>
+            </form>
         </div>
     </body>
     

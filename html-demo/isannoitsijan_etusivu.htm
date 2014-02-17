@@ -8,10 +8,52 @@
         <link href="../css/bootstrap-theme.css" rel="stylesheet">
         <link href="../css/main.css" rel="stylesheet">
     </head>
-    <body>
-        <div>
-            <h1>Isännöitsijän pääsivu</h1>
-        </div>
+    <body>            
+        <div class="container">
+            <div class="row"> <!-- tämän sisällä olevat --> 
+                <div class="col-lg-3">
+                    <h2>Navigaatio</h2>
+                    <div class="panel panel-default">
+                        <ul class="nav">
+                           <li class="active"><a href="#">Lisää talo</a></li>
+                           <li><a href="#">Yhteiset tehtävät</a></li>
+                           <li><a href="#">Yhteenvedot</a></li>
+                           <li><a href="#">Kävijäseuranta</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="col-md-9">
+                    <h2>Valitse talo</h2>
+                    <div class="panel panel-default"><!--tarkoitus olisi tuottaa ruudukko, missä kullekin taloyhtiölle olisi nappi, johon osuu helposti. Käyttäjä tulee rutinoitumaan sivun käyttöön, sillä taloyhtiöiden vaihtuvuus isännöitsijällä ei ole suurta-->
+                        
+                        <ul>
+                        <div class="row">
+                        <div class="col-md-2">
+                            <li><a href="#">talo 1</a></li>
+                            <li><a href="#">talo 2</a></li>
+                            <li><a href="#">talo 3</a></li>
+                        </div>
+                        <div class="col-md-2">    
+                            <li><a href="#">talo 4</a></li>
+                            <li><a href="#">talo 5</a></li>
+                            <li><a href="#">talo 6</a></li>
+                        </div>
+                        <div class="col-md-2">
+                            <li><a href="#">talo 7</a></li>
+                            <li><a href="#">talo 8</a></li>
+                            <li><a href="#">talo 9</a></li>
+                        </div>
+                        <div class="col-md-2">    
+                            <li><a href="#">talo 10</a></li>
+                            <li><a href="#">talo 11</a></li>
+                            <li><a href="#">talo 12</a></li>
+                        </div>
+                        </ul>
+                    </div>
+               </div>     
+        </div><!--sulkee riviosion-->
+        
     </body>
     
 
