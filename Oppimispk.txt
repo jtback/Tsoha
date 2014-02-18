@@ -9,7 +9,13 @@ Mikä on huoneiston paikka taloyhtiössä?: taloyhtiössä kukin asukas liittyy 
 
 Bootsträpin purkamisessa huomioitava, extractoi ei pura vain valittuna olevaa tiedostoa, jollei dialogissa ole määritelty valintaa. Purkaa sen kansion, minkä sisällä?
 
--
+- <?php require 'mooe/ljkhjh.php'; on tarvittu syntaksi missä tämänhetkisen tiedoston kanssa samassa kansiossa on kansio mooe ja siellä tidosto lkjhjh.php
+
+. <?php require 'mooe/'.$sivu; -tässä $sivu on php:tä
+
+-naytaNakyma('foo.php')
+
+
 
 
 
