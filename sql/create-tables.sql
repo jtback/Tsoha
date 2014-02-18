@@ -23,8 +23,7 @@ create table taloyhtiö
 (
 	Y_tunnus	    int		primary key,
 	nimi		    varchar(40),		
-	huoneistoLkm	int,
-	huoneistot	    int
+	huoneistoLkm	int       
 );
 
 
