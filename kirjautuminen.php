@@ -9,18 +9,18 @@
       'virhe' => "Kirjautuminen epäonnistui! Et antanut käyttäjätunnusta.",
     ));
  }
- nayta($sivu);
-//$kayttaja = 'talkkarin' ;// $_POST["username"];
+ //nayta($sivu);
+$kayttaja =  $_POST["username"];
 
-/*  if (empty($_POST["password"])) {
-    naytaNakymä($sivu, array(
+ if (empty($_POST["password"])) {
+    naytaNakyma($sivu, array(
       'kayttaja' => $kayttaja,
       'virhe' => "Kirjautuminen epäonnistui! Et antanut salasanaa.",
     ));
   }
-  */  
- $salasana = 'yleisavain';// $_POST["password"];
-// nayta($sivu);
+    
+ $salasana ='yleisavain';// $_POST["password"];
+ nayta($sivu);
   /* Tarkistetaan onko parametrina saatu oikeat tunnukset */
   
 // if ($kayttaja == 'talkkarin' && $salasana == 'yleisavain') {
