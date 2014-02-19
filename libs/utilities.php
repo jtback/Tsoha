@@ -6,4 +6,9 @@
     exit();
   }
   
- // function header(
+  function otsake($sivu){
+  header( 'Location: '.$sivu);
+  
+  exit();
+  }
+?>
