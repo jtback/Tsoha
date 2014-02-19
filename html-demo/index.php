@@ -14,7 +14,7 @@
     <ul>
         <li> <a href="../../Tsoha/html-demo/isannoitsijan_etusivu.htm">Isännöitsijän päänäkymään</a> </li>
         <li> <a href="../../Tsoha/html-demo/asukkaan_etusivu.htm">Asukkaan päänäkymään</a> </li>
-        <li> <a href="../../Tsoha/html-demo/kirjautumisnakyma.htm">Kirjautumisnäkymään</a> </li>         
+        <li> <a href="../../Tsoha/views/kirjautumisnakyma.php">Kirjautumisnäkymään</a> </li>         
     </ul>
   </div>
   

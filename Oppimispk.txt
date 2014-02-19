@@ -15,6 +15,12 @@ Bootsträpin purkamisessa huomioitava, extractoi ei pura vain valittuna olevaa t
 
 -naytaNakyma('foo.php')
 
+Kirjautumisesta opittua.
+
+Sivulta, joka käsittelee salasanoja ja päättää mikä sivu näytetään(Kirjautumiskontrolleri), ei poistuta ennen, kuin selaimelle lähetetään uusi osoite otsakkeessa (header('Location: views/asukkaan_etusivu.php'); )
+
+luulen, että seuraavan lokaation olisi hyvä olla kontrollerityyppiä. Lomakkeelle voidaan antaa näkymäosoite?
+
 
 
 

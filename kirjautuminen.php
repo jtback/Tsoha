@@ -23,10 +23,10 @@ $kayttaja =  $_POST["username"];
  nayta($sivu);
   /* Tarkistetaan onko parametrina saatu oikeat tunnukset */
   
-// if ($kayttaja == 'talkkarin' && $salasana == 'yleisavain') {
+if ($kayttaja == 'talkkarin' && $salasana == 'yleisavain') {
     /* Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään */
-  //  header('Location: views/asukkaan_etusivu.php');
-//  }   
+    header('Location: views/asukkaan_etusivu.php');
+  }   
 //  else {     
       /*väärän käyttäjätunnuksen tai salasanan löytäminen  Tässä käytetään omassa kirjastotiedostossa määriteltyjä yleiskäyttöisiä //funktioita.*/ 
 //      echo $sivu;

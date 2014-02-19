@@ -5,8 +5,8 @@
         <li>palvelu2</li>
         <li>palvelu3</li>
     </ul>    
-    <form action="kirjautuminen.php" method="POST">
-        Käyttäjänimi: <input type="text" name="username"/>
+    <form action="http://jtback.users.cs.helsinki.fi/Tsoha/kirjautuminen.php" method="POST">
+        Käyttäjänimi: <input type="text" name="username" value="<?php echo $data->kayttaja; ?>" />
         Salasana: <input type="password" name="password"/>
         <button type="submit">Kirjaudu</button>
     </form>
