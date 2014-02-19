@@ -1,29 +1,34 @@
 <?php
-  require_once 'lib/utilities.php';
   $sivu='kirjautumisnakyma.php';
+ // require 'views/pohja.php';
+  require_once 'libs/foo.php';
+  require_once 'libs/utilities.php';
       //Tarkistetaan että vaaditut kentät on täytetty:
-  if (empty($_POST["username"])) {
-    naytaNakymä($sivu, array(
+ if (empty($_POST["username"])) {
+   naytaNakyma($sivu, array(
       'virhe' => "Kirjautuminen epäonnistui! Et antanut käyttäjätunnusta.",
     ));
-  }
-  $kayttaja = 'talkkarin' // $_POST["username"];
+ }
+ nayta($sivu);
+//$kayttaja = 'talkkarin' ;// $_POST["username"];
 
-  if (empty($_POST["password"])) {
+/*  if (empty($_POST["password"])) {
     naytaNakymä($sivu, array(
       'kayttaja' => $kayttaja,
       'virhe' => "Kirjautuminen epäonnistui! Et antanut salasanaa.",
     ));
   }
-    
- $salasana = 'yleisavain'// $_POST["password"];
-  
+  */  
+ $salasana = 'yleisavain';// $_POST["password"];
+// nayta($sivu);
   /* Tarkistetaan onko parametrina saatu oikeat tunnukset */
-  if ($kayttaja == 'talkkarin' && $salasana == 'yleisavain') {
+  
+// if ($kayttaja == 'talkkarin' && $salasana == 'yleisavain') {
     /* Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään */
-    header('Location: asukkaan_etusivu.php');
-  }   
-  else {     
-      /*väärän käyttäjätunnuksen tai salasanan löytäminen  Tässä käytetään omassa kirjastotiedostossa määriteltyjä yleiskäyttöisiä funktioita.*/ 
-      naytaNakyma($sivu, 
+  //  header('Location: views/asukkaan_etusivu.php');
+//  }   
+//  else {     
+      /*väärän käyttäjätunnuksen tai salasanan löytäminen  Tässä käytetään omassa kirjastotiedostossa määriteltyjä yleiskäyttöisiä //funktioita.*/ 
+//      echo $sivu;
+//      naytaNakyma($sivu, 
     

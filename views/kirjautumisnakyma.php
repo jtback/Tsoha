@@ -1,29 +1,18 @@
-<!DOCTYPE html>
-<html>
-
-    <head>
-        <title>Taloyhtiön palvelut</title>    
-        </meta http-equiv="Content-Type" content="text/html; charset UTF-8">
-        <link href="../css/bootstrap.css" rel="stylesheet">
-        <link href="../css/bootstrap-theme.css" rel="stylesheet">
-        <link href="../css/main.css" rel="stylesheet">
-    </head>
-    <body>
-        <div>
-            <h1>Tervetuloa taloyhtiösivuille</h1>
-            <ul>palvelut
-                <li>palvelu1</li>
-                <li>palvelu2</li>
-                <li>palvelu3</li>
-            </ul>    
-            <form action="kirjautuminen.php" method="POST">
-                Käyttäjänimi: <input type="text" name="username"/>
-                Salasana: <input type="password" name="password"/>
-                <button type="submit">Kirjaudu</button>
-            </form>
-        </div>
-    </body>
+<div>
+    <h1>Tervetuloa taloyhtiösivuille</h1>
+    <ul>palvelut
+        <li>palvelu1</li>
+        <li>palvelu2</li>
+        <li>palvelu3</li>
+    </ul>    
+    <form action="kirjautuminen.php" method="POST">
+        Käyttäjänimi: <input type="text" name="username"/>
+        Salasana: <input type="password" name="password"/>
+        <button type="submit">Kirjaudu</button>
+    </form>
+</div>
+   
     
 
 
-</html>
+

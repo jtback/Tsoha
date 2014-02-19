@@ -1,9 +1,9 @@
 <?php
   
   function naytaNakyma($sivu, $data = array()) {
-    $data = (object)$data
+    $data = (object)$data;
     require 'views/pohja.php';
     exit();
   }
   
-  function header(
+ // function header(

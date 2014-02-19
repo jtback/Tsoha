@@ -1,5 +1,5 @@
 <?php
 
     function nayta($sivu){
-       require 'views/pohja';
+       require 'views/pohja.php';
     }
