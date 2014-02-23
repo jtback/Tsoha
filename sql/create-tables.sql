@@ -26,4 +26,10 @@ create table taloyhtiö
 	huoneistoLkm	int       
 );
 
+create table käyttäjä
+(
+    id      serial      primary key,
+    tunnus  varchar(20) not null,
+    salasana varchar(256) not null   
+);
 

@@ -1,19 +1,12 @@
 <?php
   $sivu='kirjautumisnakyma.php';
   $sivu1='asukkaan_etusivu.php';
- // require 'views/pohja.php';
- // require_once 'libs/foo.php';
+ 
   require_once 'libs/utilities.php';
-
+  //require 'libs/kayttaja.php';
 /*
-$db = pg_connect("host=localhost dbname=jtback")
-    or die('Could not connect: ' . pg_last_error());
 
-// Performing SQL query
-
-$query = 'SELECT * FROM taloyhtiö';
-$result = pg_query($query) or die('Query failed: ' . pg_last_error());
-print_r($db);
+print_r($);
 print_r($result);
 */
   
@@ -48,6 +41,7 @@ $kayttaja =  $_POST["username"];
   // Tarkistetaan onko parametrina saatu oikeat tunnukset 
  echo $kayttaja;
  echo $salasana;
+ 
   
 if ($kayttaja == 'talkkarin' && $salasana == 'avain') {
     // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään 
