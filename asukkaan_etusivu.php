@@ -1,9 +1,12 @@
 <?php 
-    $sivu='nasukasES.php'; //tätä kontrolleria vastaavan näkymän tiedosto 
+    $sivu2='nasukasES.php'; //tätä kontrolleria vastaavan näkymän tiedosto 
     require_once 'libs/utilities.php';
-    
-    naytaNakyma($sivu, array(
-    kayttaja => $kayttaja;  
+
+    echo $sivu1;
+    print_r($_POST);
+
+    naytaNakyma($sivu2, array(
+    kayttaja => "talonmies", //hoida muuttujalla
     ));
 ?>
     
