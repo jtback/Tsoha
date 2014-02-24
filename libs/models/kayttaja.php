@@ -1,19 +1,19 @@
 <?php
-Class Kayttaja{
+class Kayttaja{
 
   
   private $id;
   private $username;
   private $password;
   
-  public function __construct($id, $username, $password){
+ public function __construct($id, $username, $password){
     $this->id = $id;
-    $this->tunnus = $username;
-    $this->salasana = $password;
+    $this->username = $username;      //Tämä pätkä on peräisin
+    $this->password = $password;
   }
    /* Etsitään kannasta käyttäjätunnuksella ja salasanalla käyttäjäriviä */
-  public static function etsiKayttajaTunnuksilla($kayttaja, $salasana) {
-    $sql = "SELECT id,username, password from users where username = ? AND password = ? LIMIT 1";
+  public static function etsiKayttajaTunnuksilla($kayttaja, $salasana) {echo " pöö";
+    $sql = "SELECT id, username, password from users where username = ? AND password = ? LIMIT 1";
     $kysely = getTietokantayhteys()->prepare($sql);
     $kysely->execute(array($kayttaja, $salasana));
 

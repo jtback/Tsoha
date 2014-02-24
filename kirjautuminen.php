@@ -3,6 +3,8 @@
   $sivu1='asukkaan_etusivu.php';
  
   require_once 'libs/utilities.php';
+  require_once 'libs/models/kayttaja.php';
+  
   //require 'libs/kayttaja.php';
 /*
 
@@ -41,17 +43,26 @@ $kayttaja =  $_POST["username"];
   // Tarkistetaan onko parametrina saatu oikeat tunnukset 
  echo $kayttaja;
  echo $salasana;
- 
-  
-if ($kayttaja == 'talkkarin' && $salasana == 'avain') {
-    // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään 
-    otsake($sivu1);
+ echo "pöö";
+ $kayt = new Kayttaja();
+  $included_files = get_included_files();
+   
+   foreach ($included_files as $filename) {
+    echo "$filename\n";
+    }
+ $userInDB = $kayt.etsiKayttajaTunnuksilla($kayttaja, $salasana); 
+echo "pöö";
+
+/*if ($kayttaja == $userInDB->username && $salasana == $userInDB->password) {
+    // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään
+    
+   otsake($sivu1);
   }   
 
 else {
 
      
-/*väärän käyttäjätunnuksen tai salasanan löytäminen  Tässä käytetään omassa kirjastotiedostossa määriteltyjä yleiskäyttöisiä funktioita.*/
+/*väärän käyttäjätunnuksen tai salasanan löytäminen  Tässä käytetään omassa kirjastotiedostossa määriteltyjä yleiskäyttöisiä funktioita./
 
      naytaNakyma($sivu, array(
         'kayttaja' => $kayttaja ,
@@ -61,5 +72,5 @@ else {
 }
 
 ?>
-
+*/
 
