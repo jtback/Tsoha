@@ -44,16 +44,17 @@ $kayttaja =  $_POST["username"];
  echo $kayttaja;
  echo $salasana;
  echo "pöö";
- $kayt = new Kayttaja();
+// $kayt = new Kayttaja();
   $included_files = get_included_files();
    
    foreach ($included_files as $filename) {
     echo "$filename\n";
     }
- $userInDB = $kayt.etsiKayttajaTunnuksilla($kayttaja, $salasana); 
-echo "pöö";
-
-/*if ($kayttaja == $userInDB->username && $salasana == $userInDB->password) {
+ $userInDB = Kayttaja::etsiKayttajaTunnuksilla($kayttaja, $salasana); 
+ var_dump($userInDB);
+ $tunnus = $userInDB->username;
+ var_dump($tunnus);/*
+if ($kayttaja == $userInDB->username && $salasana == $userInDB->password) {
     // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään
     
    otsake($sivu1);
@@ -73,4 +74,3 @@ else {
 
 ?>
 */
-

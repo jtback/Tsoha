@@ -9,13 +9,14 @@
     </head>
     <body>
 <!-- tähän kaikkien sivujen yhteistä html:ää--> 
-  Tämä tulostuu pohja.php -tiedostosta. Haluat näyttää näkymän:
+  --Tämä tulostuu pohja.php -tiedostosta. Haluat näyttää näkymän:
     <?php
         
         /*Tähän haetaan yksittäisten sivujen näkymät
         * Tallenna oikean näkymän tiedostonimi muuttujaan $sivu
         */
         echo $sivu;
+        echo "--";
         require $sivu;
     
     ?>

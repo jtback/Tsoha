@@ -1,4 +1,5 @@
 <?php
+require_once 'libs/tietokantayhteys.php';
 class Kayttaja{
 
   
@@ -6,14 +7,26 @@ class Kayttaja{
   private $username;
   private $password;
   
- public function __construct($id, $username, $password){
-    $this->id = $id;
-    $this->username = $username;      //Tämä pätkä on peräisin
-    $this->password = $password;
+ public function __construct(){
+
   }
+  public function nimi() {
+      return $this->nimi;
+  }
+  private function setId($var)
+  {
+    $this->id = $var;
+  }
+  private function setUsername($var){
+    $this->username = $var;
+  }
+  private function setPassword($var){
+    $this->password = $var;
+  }
+  
    /* Etsitään kannasta käyttäjätunnuksella ja salasanalla käyttäjäriviä */
-  public static function etsiKayttajaTunnuksilla($kayttaja, $salasana) {echo " pöö";
-    $sql = "SELECT id, username, password from users where username = ? AND password = ? LIMIT 1";
+  public static function etsiKayttajaTunnuksilla($kayttaja, $salasana) {echo " etsiKayttajaTunnuksilla()";
+    $sql = "SELECT id, tunnus, salasana from käyttäjä where tunnus = ? AND salasana = ? LIMIT 1";
     $kysely = getTietokantayhteys()->prepare($sql);
     $kysely->execute(array($kayttaja, $salasana));
 
@@ -23,8 +36,8 @@ class Kayttaja{
     } else {
       $kayttaja = new Kayttaja(); 
       $kayttaja->setId($tulos->id);
-      $kayttaja->setUsername($tulos->username);
-      $kayttaja->setPassword($tulos->password);
+      $kayttaja->setUsername($tulos->tunnus);
+      $kayttaja->setPassword($tulos->salasana);
 
       return $kayttaja;
     }
