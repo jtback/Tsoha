@@ -50,12 +50,14 @@
      
          naytaNakyma($sivu, array(
             'kayttaja' => $kayttaja ,
-            'virhe' => "Kirjautuminen epäonnistui! Antamasi tunnus tai salasana on väärä.", //request;
+            'virhe' => "Kirjautuminen epäonnistui! Antamasi tunnus tai salasana on väärä.", request
     ));        // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään
         
        
       }   
          // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään
-    else otsake($sivu1);
+    else
+    $_SESSION['kirjautunut'] = $userInDB; 
+    otsake($sivu1);
     
 ?>

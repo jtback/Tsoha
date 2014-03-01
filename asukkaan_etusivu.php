@@ -8,14 +8,17 @@
   require 'libs/tietokantayhteys.php';
   $kysely = getTietokantayhteys()->prepare("SELECT * from taloyhtiö");
   $kysely->execute();
-  echo $kysely->fetchColumn();//
+  echo $kysely->fetchColumn(1);//
+  
+ // if (isset($_SESSION['kayttaja']) {
+    $kayttaja = $_SESSION['userInDB'];
 
     naytaNakyma($sivu2, array(
-    kayttaja => "talonmies", //hoida muuttujalla
+    'kayttaja' => $kayttaja->username, //hoida muuttujalla
     
     ));
 
-
+  
     
 ?>
     
