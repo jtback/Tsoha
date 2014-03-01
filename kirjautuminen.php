@@ -24,16 +24,8 @@
       'virhe' => "Kirjautuminen epäonnistui! Et antanut salasanaa.",
     ));
   }
-    
-
- 
-
- 
-
         
    $salasana = $_POST["password"];
-
-
 
 
    $userInDB = Kayttaja::etsiKayttajaTunnuksilla($kayttaja, $salasana); //palauttaa Kayttaja- luokan olion, jos salasanat oikein
@@ -44,20 +36,21 @@
    $salaisuus = $userInDB->salasana();
    var_dump($tunnus);*/
    
-     if (is_null($userInDB)) {
-          //väärän käyttäjätunnuksen tai salasanan löytäminen  Tässä käytetään
-          // omassa kirjastotiedostossa määriteltyjä yleiskäyttöisiä  funktioita.*/
-     
-         naytaNakyma($sivu, array(
-            'kayttaja' => $kayttaja ,
-            'virhe' => "Kirjautuminen epäonnistui! Antamasi tunnus tai salasana on väärä.", request
-    ));        // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään
+     if ($userInDB != null) {
+      $_SESSION['kirjautunut'] = $userInDB;  
+    otsake($sivu1);
+
+           // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään
         
        
       }   
-         // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään
-    else
-    $_SESSION['kirjautunut'] = $userInDB; 
-    otsake($sivu1);
+        
+    else         //väärän käyttäjätunnuksen tai salasanan löytäminen  Tässä käytetään
+          // omassa kirjastotiedostossa määriteltyjä yleiskäyttöisiä  funktioita.*/
+
     
+    naytaNakyma($sivu, array(
+            'kayttaja' => $kayttaja ,
+            'virhe' => "Kirjautuminen epäonnistui! Antamasi tunnus tai salasana on väärä.", request
+            ));
 ?>

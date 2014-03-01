@@ -14,16 +14,16 @@ function otsake($sivu){
   
   exit();
 }
-/*
-function kirjautunut(){
-    $asetettu = false
-    if(isset($_SESSION['kirjautunut']) 
-    {
-    $asetettu = true;
-    }
-    return $asetettu;
+
+function kirjautunut($kayttaja){
+    $asetettu = false;
+    if (isset($_SESSION['kayttaja'])) 
+        $asetettu = true;
+    
+     return $asetettu;
+      
 }
-*/
+
 
 
 
