@@ -11,8 +11,18 @@ class Kayttaja{
 
   }
   public function nimi() {
-      return $this->nimi;
+      return $this->username;
   }
+  
+  public function salasana()
+  {
+      return $this->password;  
+  }
+  
+  public function id(){
+    return $this->id;
+  }
+  
   private function setId($var)
   {
     $this->id = $var;

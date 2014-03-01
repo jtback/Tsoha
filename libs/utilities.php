@@ -1,10 +1,10 @@
 <?php
   
   function naytaNakyma($sivu, $data = array()) {
-    print_r($data);
+    
     $data = (object)$data;
     require 'views/pohja.php';
-    exit();
+    exit;
   }
   
   function otsake($sivu){

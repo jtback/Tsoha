@@ -5,27 +5,20 @@
   require_once 'libs/utilities.php';
   require_once 'libs/models/kayttaja.php';
   
-  //require 'libs/kayttaja.php';
-/*
-
-print_r($);
-print_r($result);
-*/
-  
+   
       //Tarkistetaan että vaaditut kentät on täytetty:
-      ?>
-      <?php
+
 
  if (empty($_POST["username"])) {
 //exit
    naytaNakyma($sivu, array(
       'virhe' => "Kirjautuminen epäonnistui! Et antanut käyttäjätunnusta.",
     ));
-}
-$kayttaja =  $_POST["username"];
+    }
+    $kayttaja =  $_POST["username"];
 
- if (empty($_POST["password"])) {
-//exit
+    if (empty($_POST["password"])) {
+    //exit
     naytaNakyma($sivu, array(
       'kayttaja' => $kayttaja,
       'virhe' => "Kirjautuminen epäonnistui! Et antanut salasanaa.",
@@ -37,40 +30,32 @@ $kayttaja =  $_POST["username"];
 
  
 
-    
- $salasana = $_POST["password"];
- //nayta($sivu);
-  // Tarkistetaan onko parametrina saatu oikeat tunnukset 
- echo $kayttaja;
- echo $salasana;
- echo "pöö";
-// $kayt = new Kayttaja();
-  $included_files = get_included_files();
+        
+   $salasana = $_POST["password"];
+
+
+
+
+   $userInDB = Kayttaja::etsiKayttajaTunnuksilla($kayttaja, $salasana); //palauttaa Kayttaja- luokan olion, jos salasanat oikein
+ /*  echo 'etsiKayttajaTunnuksilla($kayttaja, $salasana) palauttaa';
+   var_dump($userInDB);
+   $tunnus = $userInDB->nimi();
+   echo 'tunnuksen tallentaminen ei haitta jos väärä'.$tunnus ;
+   $salaisuus = $userInDB->salasana();
+   var_dump($tunnus);*/
    
-   foreach ($included_files as $filename) {
-    echo "$filename\n";
-    }
- $userInDB = Kayttaja::etsiKayttajaTunnuksilla($kayttaja, $salasana); 
- var_dump($userInDB);
- $tunnus = $userInDB->username;
- var_dump($tunnus);/*
-if ($kayttaja == $userInDB->username && $salasana == $userInDB->password) {
-    // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään
-    
-   otsake($sivu1);
-  }   
-
-else {
-
+     if (is_null($userInDB)) {
+          //väärän käyttäjätunnuksen tai salasanan löytäminen  Tässä käytetään
+          // omassa kirjastotiedostossa määriteltyjä yleiskäyttöisiä  funktioita.*/
      
-/*väärän käyttäjätunnuksen tai salasanan löytäminen  Tässä käytetään omassa kirjastotiedostossa määriteltyjä yleiskäyttöisiä funktioita./
-
-     naytaNakyma($sivu, array(
-        'kayttaja' => $kayttaja ,
-        'virhe' => "Kirjautuminen epäonnistui! Antamasi tunnus tai salasana on väärä.", //request;
-));
-
-}
-
+         naytaNakyma($sivu, array(
+            'kayttaja' => $kayttaja ,
+            'virhe' => "Kirjautuminen epäonnistui! Antamasi tunnus tai salasana on väärä.", //request;
+    ));        // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään
+        
+       
+      }   
+         // Jos tunnus on oikea, ohjataan käyttäjä sopivalla HTTP-otsakkeella asukkaan päänäkymään
+    else otsake($sivu1);
+    
 ?>
-*/
