@@ -44,14 +44,13 @@ class Kayttaja{
     if ($tulos == null) {
       return null;
     } else {
-      $kayttaja = new Kayttaja(); 
-      $kayttaja->setId($tulos->id);
+      $kayttaja = new Kayttaja();                   //Jos nämä siirretään konstruktorin sisään,
+      $kayttaja->setId($tulos->id);                 //niin miten viitataan $tulos muuttujaan?
       $kayttaja->setUsername($tulos->tunnus);
       $kayttaja->setPassword($tulos->salasana);
-
       return $kayttaja;
     }
   }
-
   /* Tähän muita Käyttäjäluokan metodeita */
+  
 }

@@ -5,6 +5,9 @@
   require_once 'libs/utilities.php';
   require_once 'libs/models/kayttaja.php';
   
+ if (empty($_POST)) 
+naytaNakyma($sivu, array('kayttaja' => '')); 
+
    
       //Tarkistetaan että vaaditut kentät on täytetty:
 
@@ -51,6 +54,6 @@
     
     naytaNakyma($sivu, array(
             'kayttaja' => $kayttaja ,
-            'virhe' => "Kirjautuminen epäonnistui! Antamasi tunnus tai salasana on väärä.", request
+            'virhe' => "Kirjautuminen epäonnistui! Antamasi tunnus tai salasana on väärä.", 'request'
             ));
 ?>

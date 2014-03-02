@@ -9,7 +9,7 @@
   $kysely = getTietokantayhteys()->prepare("SELECT * from taloyhtiö");
   $kysely->execute();
   echo $kysely->fetchColumn(1);//
-
+  var_dump($_SESSION );
     naytaNakyma($sivu2, array(
     'kayttaja' => 'teddy', //hoida muuttujalla
     
