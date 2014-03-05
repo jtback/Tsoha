@@ -6,12 +6,12 @@
   require_once 'libs/models/kayttaja.php';
   
  if (empty($_POST)) 
-naytaNakyma($sivu, array('kayttaja' => '')); 
+naytaNakyma($sivu, array('kayttaja' => '')); //TYhjä String evaluoituu FALSE:ksi
 
    
       //Tarkistetaan että vaaditut kentät on täytetty:
 
-
+      //Käyttäjätunnus kirjoitettu  
  if (empty($_POST["username"])) {
 //exit
    naytaNakyma($sivu, array(

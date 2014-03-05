@@ -11,7 +11,7 @@
   echo $kysely->fetchColumn(1);//
   var_dump($_SESSION );
     naytaNakyma($sivu2, array(
-    'kayttaja' => 'teddy', //hoida muuttujalla
+    //'kayttaja' => 'teddy', //hoida muuttujalla
     
     ));
 
